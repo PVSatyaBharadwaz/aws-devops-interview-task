@@ -1,7 +1,8 @@
 pipeline {
     agent any
     environment {
-        NEXUS_HOST_PORT      = '54.173.28.6:5000'
+        # THIS LINE HAS BEEN UPDATED WITH THE NEW IP ADDRESS
+        NEXUS_HOST_PORT      = '54.164.31.175:5000'
         NEXUS_REPO_NAME      = 'my-app'
         NEXUS_CREDENTIALS_ID = 'nexus-creds'
         DOCKER_IMAGE_NAME    = 'devops-task-image'
@@ -10,7 +11,6 @@ pipeline {
         stage('1. Checkout from GitHub') {
             steps {
                 echo "Cloning the repository from GitHub..."
-                // !!! Using the username from your screenshot !!!
                 git branch: 'main', url: 'https://github.com/PVSatyaBharadwaz/aws-devops-interview-task.git'
             }
         }
