@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        // THIS LINE HAS BEEN UPDATED WITH THE NEW IP ADDRESS
         NEXUS_HOST_PORT      = '54.164.31.175:5000'
         NEXUS_REPO_NAME      = 'my-app'
-        NEXUS_CREDENTIALS_ID = 'nexus-creds'
+        // Using the credential ID that Jenkins auto-generated for you
+        NEXUS_CREDENTIALS_ID = '3aa8871f-377b-4b81-98a1-7b383b6ed889'
         DOCKER_IMAGE_NAME    = 'devops-task-image'
     }
     stages {
