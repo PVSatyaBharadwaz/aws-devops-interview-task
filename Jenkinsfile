@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        NEXUS_HOST_PORT      = '54.164.31.175:5000'
+        // THE FINAL FIX: Using localhost for a direct internal connection
+        NEXUS_HOST_PORT      = 'localhost:5000'
         NEXUS_REPO_NAME      = 'my-app'
-        // Using the credential ID that Jenkins auto-generated for you
         NEXUS_CREDENTIALS_ID = '3aa8871f-377b-4b81-98a1-7b383b6ed889'
         DOCKER_IMAGE_NAME    = 'devops-task-image'
     }
