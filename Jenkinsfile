@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        # THIS LINE HAS BEEN UPDATED WITH THE NEW IP ADDRESS
+        // THIS LINE HAS BEEN UPDATED WITH THE NEW IP ADDRESS
         NEXUS_HOST_PORT      = '54.164.31.175:5000'
         NEXUS_REPO_NAME      = 'my-app'
         NEXUS_CREDENTIALS_ID = 'nexus-creds'
